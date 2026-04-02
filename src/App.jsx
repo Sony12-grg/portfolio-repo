@@ -2,10 +2,10 @@ import React from 'react'
 import Navbar from './layout/Navbar.jsx'
 import Hero from './sections/Hero.jsx'
 import About from './sections/About.jsx'
-import Contact from './sections/Contact.jsx'
-import Experience from './sections/Experience.jsx'
 import Projects from './sections/Projects.jsx'
-import Testimonals from './sections/Testimonals.jsx'
+import Contact from './sections/Contact.jsx'
+import Footer from './sections/Footer.jsx'
+
 export default function App() {
   return (
     <div className='min-h-screen overflow-hidden'>
@@ -13,12 +13,15 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Contact />
-        <Experience />
+       
+
         <Projects />
-        <Testimonals/>
+         <Contact />
+
       </main>
-    
+
+      <Footer />
+
     </div>
   )
 }
