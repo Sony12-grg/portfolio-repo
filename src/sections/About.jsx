@@ -37,7 +37,7 @@ export default function About() {
             {/*Left Column */}
             <div className='animate-fade-in'>
             <div className='space-y-8'>
-              <span className='text-secondary-foreground text-sm font-large  tracking-wider uppercase '>About Me</span>
+              <span className='text-secondary-foreground text-sm font-large  tracking-wider uppercase text-teal-400'>About Me</span>
             </div>
 
             <h2 className='text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground'>Building the future,
@@ -45,11 +45,8 @@ export default function About() {
                  one component at a time.
               </span>
             </h2>
-            <div className='space-y-4 text-muted-foreground animate-fade-in animation-delay-200 '>
-              <p>
-                I’m a passionate frontend developer focused on building clean, responsive, and user-friendly web interfaces. I enjoy turning ideas into real,  interactive experiences using HTML, CSS, JavaScript, and React. My approach is centered on simplicity, performance, and creating designs that feel smooth and intuitive for users.
-              </p>
-              <p className='my-4'>
+            <div className='space-y-4 text-muted-foreground animate-fade-in animation-delay-200  '>
+              <p className='my-4 mb-12'>
                 Currently, I am expanding my skills into full-stack development by learning backend technologies like Node.js, Express, and MongoDB. I am continuously building projects to improve my skills and understand how complete web applications work from frontend to backend.
               </p>
             </div>

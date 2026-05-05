@@ -5,7 +5,34 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+:root {
+  /* Light theme (default) */
+  --color-background: #ffffff;
+  /* Darker foreground for better contrast on light background */
+  --color-foreground: #0b1220;
+
+  --color-card: #ffffff;
+
+  --color-primary: #20b2a6;
+  --color-primary-foreground:#ffffff;
+
+  --color-secondary:#f1f5f9;
+  --color-secondary-foreground:#20b2a6;
+
+  --color-muted: #f3f4f6;
+  /* Slightly darker muted text for legibility */
+  --color-muted-foreground: #4b5563;
+
+  --color-border: #e6e9ee;
+
+  --radius: 0.75rem;
+
+  --color-highlight: #f5a623;
+  --color-surface: #ffffff;
+}
+
+/* Dark theme overrides when `.dark` is present on the document element */
+.dark {
   --color-background: #0f1418;
   --color-foreground: #f0f2f5;
 
@@ -22,8 +49,6 @@
 
   --color-border: #242b32;
 
-  --radius: 0.75rem;
-
   --color-highlight: #f5a623;
   --color-surface: #1a2329;
 }
@@ -37,7 +62,6 @@
      background-color: var(--color-background);
      color: var(--color-foreground);
      font-family:"Inter", sans-serif;
-    @apply bg-background text-foreground;
   }
   .font-serif{
     font-family: "Playfair Display", serif;
@@ -86,6 +110,26 @@
   }
   .animate-fade-in {
     animation: fade-in 0.8s ease-out both;
+  }
+
+  /* Theme-aware text utilities */
+  .text-foreground {
+    color: var(--color-foreground) !important;
+  }
+
+  .text-muted-foreground {
+    color: var(--color-muted-foreground) !important;
+  }
+
+  /* CTA subtle lift on hover + smooth transition */
+  .cta-pop {
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+  .cta-pop:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px color-mix(in srgb, var(--color-primary) 12%, transparent);
   }
   @keyframes slow-drift {
     0%,

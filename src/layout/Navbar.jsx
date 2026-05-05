@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../components/Button.jsx'
+import ThemeToggle from '../components/ThemeToggle.jsx'
 import { scrollToContactAndFocusEmail } from '../lib/utils.js'
 import { Menu,X } from 'lucide-react'
 import { useState } from 'react';
@@ -26,8 +27,8 @@ export default function Navbar() {
     <div>
       <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}> 
         <nav className='container mx-auto px-6 flex items-center justify-between'>
-         <a href="#" className='text-xl font-bold tracking-tight hover:text-primary'>
-            SG<span className='text-primary'>.</span>
+         <a href="#" className='text-2xl font-bold tracking-tight hover:text-primary'>
+            SONIYA<span className='text-primary'>.</span>
          </a>
 
    {/* Desktop Nav*/ }
@@ -41,9 +42,9 @@ export default function Navbar() {
           </div>
            
          </div>
-         {/* CTA Button */}
+         {/* Theme Toggle (replaces Contact button on desktop) */}
             <div className='hidden md:block'>
-              <Button size='sm' onClick={scrollToContactAndFocusEmail}>Contact Me</Button>
+              <ThemeToggle />
             </div>
          {/* Mobile Menu Botton Nav */ }
          <button className='md:hidden p-2 text-foreground cursor-pointer ' onClick={() => setMobileMenuOpen((prev) => !prev)}>

@@ -18,11 +18,11 @@ export default function Contact() {
           </span>
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
           From Frontend to <span className="text-teal-400 italic font-serif">Full-Stack</span>.
         </h2>
 
-        <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+        <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
           I’ve spent the last year mastering the frontend with <strong>HTML, CSS</strong> and <strong>JavaScript</strong>. Now, I’m diving deep into <strong>React.js, Node.js</strong> and <strong>MongoDB</strong> to complete the MERN circle. 
           
           I’m ready to bring my frontend expertise to a team while growing into a full-stack role.
@@ -33,7 +33,7 @@ export default function Contact() {
             id="mailto-link"
             tabIndex={-1}
             href="mailto:soniyagurung924@gmail.com"
-            className="px-8 py-3 bg-teal-400 text-gray-900 font-bold rounded-lg hover:bg-teal-300 transition-all shadow-[0_0_15px_rgba(45,212,191,0.2)]"
+              className="px-8 py-3 bg-teal-400 text-gray-900 font-bold rounded-lg hover:bg-teal-300 transition-all shadow-[0_0_15px_rgba(45,212,191,0.2)] cta-pop animate-fade-in"
           >
             Let's Chat
           </a>

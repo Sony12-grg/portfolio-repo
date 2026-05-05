@@ -23,6 +23,16 @@ const projects = [
     page: "/projects/cocktail.html",
     tech: ["React", "Tailwind", "Vite", "API"],
 
+  },
+  {
+    id:3,
+    title: "Stock Portfolio App",
+    description: "A simple app to browse and manage stock portfolios.",
+    image: "/images/stock-portfolio-app.png",
+    href: "https://stock-portfolio-repo.vercel.app/",
+    page: "/projects/stock-portfolio.html",
+    tech: ["React","Redux-Toolkit", "Tailwind", "Vite"],
+
   }
 ]
 
@@ -31,7 +41,7 @@ export default function Projects() {
     <section id="projects" className="py-7 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="space-y-6 mb-8 w-full">
-          <span className="text-secondary-foreground text-sm tracking-wider uppercase">Projects</span>
+          <span className="text-secondary-foreground text-sm tracking-wider uppercase text-teal-400">Projects</span>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground">Selected Works
             <span className="font-serif italic font-normal text-white"> — real projects & demos</span>
           </h2>
@@ -51,7 +61,7 @@ export default function Projects() {
               >
                 <div className="flex flex-col md:flex-row items-start justify-between gap-4 w-full">
                   <div className="w-full">
-                    <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
+                    <h3 className="text-2xl font-semibold mb-2  text-teal-400">{p.title}</h3>
                     <p className="text-muted-foreground mb-4 w-full">{p.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {p.tech.map((t, i) => (

@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from '../components/Button.jsx'
 import { scrollToContactAndFocusEmail } from '../lib/utils.js'
 import { ArrowRight, ChevronDown} from 'lucide-react'
-import AnimatedBorderButton from '../components/AnimatedBorderButton.jsx'
 
 const skills = [
    "HTML",
@@ -71,8 +70,7 @@ export default function Hero() {
                 </p>
               </div>
               <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
-                <Button size='lg' onClick={scrollToContactAndFocusEmail}>Contact Me <ArrowRight className='w-5 h-5' /></Button>
-               <AnimatedBorderButton  />
+                <Button size='lg' onClick={scrollToContactAndFocusEmail} className="px-8 py-3 bg-teal-300 text-gray-900 font-bold rounded-2xl hover:bg-teal-300 transition-all shadow-[0_0_15px_rgba(45,212,191,0.2)] cta-pop animate-fade-in">Contact Me <ArrowRight className='w-5 h-5' /></Button>
               </div>
               {/* Social Links
               <div className='flex items-center gap-4 animate-fade-in animation-delay-400 '>
@@ -100,7 +98,7 @@ export default function Hero() {
                 <div className='relative glass rounded-3xl p-2 glow-border'>
                   <img src="/profile.png" alt="Soniya Gurung" className='w-full aspect-[4/5] object-cover rounded-2xl' />
 
-                  {/*Floating Badge */}
+                  {/* Floating Badge */}
                   <div className='absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float'>
                     <div clas
                     flex items-center gap-3>
